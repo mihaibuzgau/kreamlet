@@ -19,7 +19,7 @@ func Run(sshPort string, kubePort string, cpus string, memory string, disk strin
 	binary, lookErr := exec.LookPath("linuxkit")
 	if lookErr != nil {
 		fmt.Println("downloading linuxkit binary")
-		fileUrl := "https://github.com/linuxkit/linuxkit/releases/download/v0.5/linuxkit-amd64"
+		fileUrl := "https://github.com/linuxkit/linuxkit/releases/download/v0.5/linuxkit-linux-amd64"
 		dest := "/usr/local/bin/linuxkit"
 		err := DownloadFile(fileUrl, dest)
 		if err != nil {
